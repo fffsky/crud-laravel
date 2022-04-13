@@ -1,0 +1,48 @@
+/* 会員登録情報画面（/top） */
+    .personal-text{
+        margin: 50px;
+    }
+    .personal-text h1{
+        margin-bottom: 50px;
+    }
+    .personal-text p{
+        font-size: 1.5rem;
+    }
+    .personal-link{
+        margin: 50px;
+        text-decoration: underline;
+    }
+
+/* 会員情報修正画面（/edit） */
+    .editForm{
+        margin: 50px;
+    }
+    .editForm h1{
+        margin-bottom: 50px;
+    }
+    .editForm p{
+        font-size: 1.5rem;
+    }
+    .editInput{
+        width: 450px;
+        margin-bottom: 30px;
+    }
+    .edit-link .submitButton{
+        margin-right: 250px;
+    }
+
+/* 会員一覧画面（/view） */
+   .view-text{
+       margin: 70px;
+    }
+   .view-text h1{
+       margin-bottom: 50px;
+       font-size: 2rem;
+}
+   .view-text p{
+       padding-left: 50px;
+       font-size: 1.5rem;
+}
+   .view-text .view-email{
+       margin-bottom: 70px;
+}
