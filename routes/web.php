@@ -20,7 +20,9 @@ Route::get('/', function () {
 
 Route::get('/top',[UserController::class,'top'])->name('top');
 
-Route::get('/view',[UserController::class,'view'])->name('viewr');
+Route::get('/deleteView',[UserController::class,'deleteView'])->name('deleteView');
+
+// Route::get('/registerView',[UserController::class,'registerView'])->name('registerView');
 
 Route::get('/register1',[UserController::class,'register'])->name('register');
 
@@ -35,3 +37,7 @@ Route::get('/userDelete/{id}', [UserController::class, 'userDelete']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['onlyadmin'])->group(function () {
+    Route::get('/registerView', [App\Http\Controllers\UserController::class, 'registerView'])->name('registerView');
+});
