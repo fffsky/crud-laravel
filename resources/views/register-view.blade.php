@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="register-view-text">
-    <h1>会員一覧<h1>
+    <h1>登録会員<h1>
         @foreach($user as $value)
             <p>ID：{{$value->id}}</p>    
             <p>氏名：{{$value->name}}</p>

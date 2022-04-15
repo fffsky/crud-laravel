@@ -20,9 +20,9 @@ Route::get('/', function () {
 
 Route::get('/top',[UserController::class,'top'])->name('top');
 
-Route::get('/deleteView',[UserController::class,'deleteView'])->name('deleteView');
+//Route::get('/deleteView',[UserController::class,'deleteView'])->name('deleteView');
 
-// Route::get('/registerView',[UserController::class,'registerView'])->name('registerView');
+//Route::get('/registerView',[UserController::class,'registerView'])->name('registerView');
 
 Route::get('/register1',[UserController::class,'register'])->name('register');
 
@@ -40,4 +40,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware(['onlyadmin'])->group(function () {
     Route::get('/registerView', [App\Http\Controllers\UserController::class, 'registerView'])->name('registerView');
+});
+Route::middleware(['onlyadmin'])->group(function () {
+    Route::get('/deleteView', [App\Http\Controllers\UserController::class, 'deleteView'])->name('deleteView');
 });
