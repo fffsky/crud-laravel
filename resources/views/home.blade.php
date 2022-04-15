@@ -20,6 +20,6 @@
         </div>
     </div> 
 </div>-->
-<a href={{route('top')}}>会員一覧画面（本当は作らない</p>
+<a href={{route('top')}}>画面を戻す</p>
 
 @endsection

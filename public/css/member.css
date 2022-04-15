@@ -31,18 +31,40 @@
         margin-right: 250px;
     }
 
-/* 会員一覧画面（/view） */
+/* 削除一覧画面（/deleteView） */
    .view-text{
        margin: 70px;
     }
    .view-text h1{
        margin-bottom: 50px;
        font-size: 2rem;
-}
+    }
    .view-text p{
        padding-left: 50px;
        font-size: 1.5rem;
-}
-   .view-text .view-email{
+    }
+   .view-text .view-delete{
        margin-bottom: 70px;
-}
+    }
+    .view-text a{
+        font-size: 1.5rem;
+    }
+
+/* 会員一覧画面（/registerView） */
+    .register-view-text{
+        margin: 70px;
+    }
+    .register-view-text h1{
+        margin-bottom: 50px;
+        font-size: 2rem;
+    }
+    .register-view-text p{
+        padding-left: 50px;
+        font-size: 1.5rem;
+    }
+    .register-view-text .view-email{
+        margin-bottom: 70px;
+    }
+    .register-view-text a{
+        font-size: 1.5rem;
+    }
