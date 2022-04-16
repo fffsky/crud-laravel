@@ -61,7 +61,9 @@
                                 </a>
                                
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
+                                    <a class="dropdown-item" href="{{ route('top') }}">
+                                                {{ __('会員情報確認') }}
+                                    </a>
                                     @if (Auth::user()->id === 1)
                                         <a class="dropdown-item" href="{{ route('registerView',['id' => Auth::user()->id]) }}">
                                                 {{ __('会員一覧') }}
@@ -89,7 +91,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main {{--class="py-4"--}}>
             @yield('content')
         </main>
     </div>

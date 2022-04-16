@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<main  id="bg-img">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -12,7 +13,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('名前（フルネーム）') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('氏名') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -29,7 +30,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="example@.com">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="example@laravel.com">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -43,7 +44,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" value="" placeholder="8-25文字の半角英数字">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" value="" placeholder="( 8-25文字の半角英数字 )">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -74,4 +75,5 @@
         </div>
     </div>
 </div>
+</main>
 @endsection
