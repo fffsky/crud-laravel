@@ -9,7 +9,7 @@
             <p >メールアドレス：{{$value->email}}</p>
             <p class="view-delete">削除日：{{$value->deleted_at}}</p>
         @endforeach
-        <a href={{route('registerView')}}>会員一覧に戻る</p>
+        <a href={{route('registerView')}}>会員一覧を表示</p>
     </div>
    
 @endsection

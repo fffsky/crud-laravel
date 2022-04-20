@@ -61,12 +61,15 @@ class UserController extends Controller
     }
 
     public function userEdit(Request $request){
-
+        $validated = $request->validate([
+            'name' => 'required', 'string',
+            'email' => 'required|unique:users,email,'.$request->id.',id',
+        ]);
+        
         $user = user::where('id', '=',  Auth::user()->id)->first();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->save();
-        
         return redirect('top');
     }
     

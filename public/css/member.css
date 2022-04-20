@@ -26,10 +26,18 @@
     }
     .editInput{
         width: 450px;
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
     .edit-link .submitButton{
         margin-right: 250px;
+    }
+    .editForm .error-message{
+        color: red;
+        font-size: 1rem;
+        margin-bottom: 70px;
+    }
+    .edit-link .btn-primary{
+        margin-bottom: 35px;
     }
 
 /* 削除一覧画面（/deleteView） */
@@ -77,4 +85,7 @@
         min-height: 100vh;
     }
 
-    #bg-img .container{padding-top: 7%;}
+    /* 背景 */
+    #bg-img .container{
+        padding-top: 7%;
+    }

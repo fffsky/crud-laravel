@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+<!-- バリデーションエラーの表示 -->
+{{--@include('common.errors')--}}
 
 <div class="editForm">
     <h1>会員情報修正</h1>
@@ -10,6 +12,12 @@
                 <input class="editInput" type="text" name="name" value="{{$user->name}}">
             <p>メールアドレス<p>
                 <input class="editInput" type="text" name="email" value="{{$user->email}}"><br>
+                <!-- メールアドレスのバリデーション -->
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <p class="error-message">{{$message}}</p>
+                    </span>
+                @enderror 
             <div class="edit-link">
                 <button class="submitButton btn btn-primary" id="edit_btn" type="submit">編集</button>
                 <a href={{route('top')}}>編集しないで戻る</a>
